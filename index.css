@@ -1,0 +1,122 @@
+:root {
+    /* Colors */
+    --body-color:#E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #FB9304;
+    --primary-color-light: #F6F5FF;
+    --togle-color:#DDD;
+    --text-color:#707070;
+    /* animationsTransitions */
+    --tran-02:all 0.2s ease;
+    --tran-03:all 0.3s ease;
+    --tran-04:all 0.4s ease;
+    --tran-05:all 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+body {
+    background: var(--body-color);
+    height: 100vh;
+    width: 100%;
+}
+.sideBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: var(--sidebar-color);
+    padding: 1rem .5rem;
+}
+.sideBar .text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color:var(--text-color);
+}
+.sideBar .sideBarContent {
+    display:flex;
+    flex-direction: column;
+    height:calc(100% - 1rem);
+}
+.sideBar header{
+    position: relative;
+    display:block;
+}
+.sideBar header .logoContainer {
+    display: flex;
+    align-items: center;
+}
+.sideBar header .logoContainer .logo {
+    display: inline-block;
+    padding: .5rem;
+}
+.sideBar header .logoContainer .logo img {
+    width: 50px;
+    border-radius:  6px;
+}
+.sideBar header .logoContainer .headerText {
+    display: flex;
+    flex-direction: column;
+}
+.sideBar header .logoContainer .text .name {
+    font-weight: 600;
+}
+.sideBar header .logoContainer .text .description {
+    margin-top:-2px;
+}
+.sideBar header .toggleMenu {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color);
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    color:var(--sidebar-color);
+    font-size: 1.2rem;
+}
+.sideBar .menuBar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sideBar .menuBar .menuLinks {
+    list-style: none;
+    font-size: 1.2rem;
+}
+.sideBar .menuBar ul .navLink {
+    height: 50px;
+    margin-top: .6rem;
+    display: flex;
+    border-radius: .4rem;
+    align-items: center;
+    transition: var(--tran-03);
+} 
+.sideBar .menuBar ul .navLink:hover {
+    cursor: pointer;
+    background: var(--primary-color);
+}
+.sideBar .menuBar ul .navLink:hover .text {
+    color: var(--sidebar-color);
+}
+.sideBar .menuBar ul .navLink a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+.sideBar .menuBar ul .navLink a .menuIcon{
+    margin: 0 8%;
+}

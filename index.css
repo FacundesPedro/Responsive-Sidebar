@@ -63,6 +63,7 @@ body {
 .sideBar header .logoContainer .logo img {
     width: 50px;
     border-radius:  6px;
+    color:var(--primary-color);
 }
 .sideBar header .logoContainer .headerText {
     display: flex;
